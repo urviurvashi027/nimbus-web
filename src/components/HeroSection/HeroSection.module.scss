@@ -1,0 +1,71 @@
+.heroSection {
+  padding-top: 9%;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 110px;
+
+  background-color: #fffdf7;
+
+  h2 {
+    font-size: 48px;
+    color: #333;
+
+    span {
+      color: #5b3fba;
+    }
+  }
+
+  .leftContent {
+    text-align: center;
+    width: 46%;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 20px;
+    color: #666;
+    margin: 20px 0;
+  }
+
+  .subscribe {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+
+    p {
+      font-size: 16px;
+    }
+
+    input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 300px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #5b3fba;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #4730a8;
+      }
+    }
+  }
+
+  .rightContent img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+}

@@ -1,0 +1,108 @@
+.reviewsSection {
+  padding: 2.5rem 0;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 2.5rem;
+  max-width: 800px; /* Constrain the width of the section */
+  margin-left: auto; /* Center the section */
+  margin-right: auto; /* Center the section */
+  border-bottom: 1px solid #e5e7eb; /* Added horizontal divider */
+}
+
+.titleHeader {
+  margin-bottom: 2rem;
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    svg {
+      color: #f59e0b;
+    }
+  }
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
+
+// --- FINAL CORRECTED CAROUSEL STYLES ---
+
+.carouselWrapper {
+  position: relative; // Establish a positioning context for the arrows
+}
+
+.slide {
+  // Add padding to the slide itself to prevent content from touching the edges
+  padding: 0 0.5rem;
+}
+
+.card {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  height: 200px; /* Set a fixed height for all cards */
+  display: flex; /* Use flexbox for vertical alignment */
+  flex-direction: column;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .authorInfo {
+    flex-grow: 1;
+    strong {
+      display: block;
+    }
+    span svg {
+      font-size: 0.8rem;
+      color: #f59e0b;
+    }
+  }
+  .date {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+}
+
+.reviewText {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #374151;
+  flex-grow: 1; /* Allow text to fill available space */
+}
+
+// --- Final Arrow Styles (Overlay Position) ---
+.arrow {
+  position: absolute;
+  top: 45%; /* Adjusted vertical alignment */
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #4b5563;
+  z-index: 2; // Ensure arrows are above the slides
+
+  // Position arrows on top of the carousel content, near the edges
+  &.prev {
+    left: -3rem; // Adjusted for better positioning
+  }
+  &.next {
+    right: -3rem; // Adjusted for better positioning
+  }
+}

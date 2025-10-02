@@ -1,0 +1,77 @@
+.featuredSection {
+  padding: 60px 80px;
+  background-color: #dfd9f9;
+
+  h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+}
+
+.articleGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.articleCard {
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  h3 {
+    font-size: 22px;
+    margin: 10px 0;
+  }
+
+  .category {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .authorImage {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .readMore {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background-color: #333;
+    }
+  }
+}

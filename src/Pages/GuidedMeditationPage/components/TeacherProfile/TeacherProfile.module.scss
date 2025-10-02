@@ -1,0 +1,60 @@
+.teacherSection {
+  padding: 2.5rem 0;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 2.5rem;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+}
+
+.profileLayout {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.info {
+  flex-grow: 1;
+  h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  .location {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0.25rem 0 0 0;
+  }
+}
+
+.viewProfileButton {
+  background-color: #111827;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bio {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4b5563;
+  a {
+    color: #111827;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,40 @@
+.contentCarouselSection {
+  //   display: grid;
+  //   grid-template-columns: 1fr 2fr;
+  //   gap: 4rem;
+  align-items: center;
+  padding: 2.5rem 0;
+  //   border-top: 1px solid #e5e7eb;
+  margin-top: 2.5rem;
+}
+
+.textColumn {
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+  }
+  .readMoreLink {
+    font-weight: 600;
+    color: #111827;
+    text-decoration: underline;
+  }
+}
+
+// We need to override the nested CardCarousel's styles
+.carouselColumn {
+  :global(.carouselSection) {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  :global(.header) {
+    display: none; // Hide the title since it's handled by this component
+  }
+}

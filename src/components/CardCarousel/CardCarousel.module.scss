@@ -1,0 +1,78 @@
+.carouselSection {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  max-width: 800px;
+  margin-top: 2.5rem;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.header {
+  margin-bottom: 2rem;
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+// New container for the carousel and its arrows
+.carouselContainer {
+  position: relative;
+}
+
+.scrollContainer {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 0 0.5rem; // Add a little padding so cards don't touch the edge
+  // Hide scrollbar for a cleaner look
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+// --- Corrected Arrow Styles ---
+.arrows {
+  // Use display:none by default, and only show on larger screens
+  display: none;
+  color: #4b5563;
+
+  @media (min-width: 1024px) {
+    // Show arrows on desktop and position them
+    display: block;
+    button {
+      position: absolute;
+      // This is the better way: Use a percentage to target the image's
+      // vertical center, which is more robust than a fixed rem value.
+      top: 40%;
+      transform: translateY(-50%);
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: #4b5563;
+      border: 1px solid #e5e7eb;
+      z-index: 2;
+
+      // Target the SVG icon directly for reliable styling
+      svg {
+        color: #4b5563;
+        font-size: 1rem;
+      }
+
+      &:first-child {
+        left: -3.25rem; // Using your desired horizontal position
+      }
+      &:last-child {
+        right: -3.25rem; // Using your desired horizontal position
+      }
+    }
+  }
+}

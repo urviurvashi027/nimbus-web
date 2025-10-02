@@ -1,0 +1,8 @@
+.main {
+  display: grid;
+  grid-template-columns: 300px 1fr; /* Sidebar takes 300px, blog section takes the rest */
+  gap: 20px;
+  padding: 40px;
+  min-height: 100vh;
+  padding-top: 9%;
+}

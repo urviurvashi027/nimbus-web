@@ -1,0 +1,23 @@
+.hostListSection {
+  padding-top: 2.5rem;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e5e7eb;
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 2rem 0;
+  color: #111827;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem; // Space between multiple hosts
+}

@@ -1,0 +1,62 @@
+.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  width: 260px; // Fixed width for each card
+  flex-shrink: 0; // Prevent card from shrinking in a flex container
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  margin-bottom: 0.75rem;
+
+  img {
+    width: 100%;
+    aspect-ratio: 1 / 1; // Square aspect ratio
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+}
+
+.tag {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cardContent {
+  padding: 0 0.25rem;
+}
+
+.metaTop {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.cardAuthor {
+  font-size: 0.875rem;
+  color: #6b7280;
+}

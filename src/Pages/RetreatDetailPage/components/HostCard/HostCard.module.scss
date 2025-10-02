@@ -1,0 +1,72 @@
+.hostCard {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.headerInfo {
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  p {
+    font-size: 1rem;
+    color: #6b7280;
+    margin: 0.25rem 0 0 0;
+  }
+}
+
+.bio {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  a {
+    color: #111827;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detailItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+
+  svg {
+    font-size: 1.5rem;
+    color: #2dd4bf; // Teal color
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+  }
+
+  strong {
+    display: block;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  span {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+}

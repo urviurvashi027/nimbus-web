@@ -1,0 +1,78 @@
+.infoSection {
+  width: 100%;
+  margin-top: 2.5rem;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+// --- Metadata Grid ---
+.metaGrid {
+  display: flex;
+  gap: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  .label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.25rem;
+  }
+  .value {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #111827;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+}
+
+// --- Description ---
+.description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #374151;
+  margin: 2rem 0;
+}
+
+// --- Tags ---
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tag {
+  background-color: transparent;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  &:hover {
+    background-color: #f9fafb;
+    border-color: #9ca3af;
+  }
+}
+
+// --- Transcript ---
+.transcript {
+  margin-top: 2rem;
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #6b7280;
+  }
+}

@@ -1,0 +1,222 @@
+// Main container for the entire blog page
+.blogPage {
+  background-color: #ffffff;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+// Two-column layout
+.pageLayout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 4rem auto;
+  align-items: flex-start;
+}
+
+// --- Left Sidebar Styles ---
+.leftSidebar {
+  position: sticky;
+  top: 210px; // Adjust based on your header height
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Center all content within the sidebar
+  gap: 2rem;
+}
+
+.authorInfo {
+  display: flex; // Use flexbox for robust alignment
+  flex-direction: column;
+  align-items: center;
+  text-align: center; // Ensure text inside is centered
+
+  .authorAvatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    background-color: #f3f4f6;
+    object-fit: cover;
+  }
+  strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #111827; // Ensure name is visible
+  }
+  p {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
+  }
+  span {
+    font-size: 0.75rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    &:hover {
+      background-color: #f3f4f6;
+      color: #111827;
+    }
+  }
+}
+
+// --- Main Content Styles ---
+.mainContent {
+  max-width: 800px;
+}
+
+.articleTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 2rem 0;
+}
+
+.mainImage {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  background-color: #f3f4f6;
+}
+
+.articleBody {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #374151;
+
+  p {
+    margin: 0 0 1.5rem 0;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 3rem 0 1.5rem 0;
+  }
+  blockquote {
+    border-left: 4px solid #e5e7eb;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #4b5563;
+  }
+  ul {
+    margin: 2rem 0;
+    padding-left: 1.5rem;
+    li {
+      margin-bottom: 0.75rem;
+    }
+  }
+}
+
+// --- Energy Reset Card Styles ---
+.energyResetCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  margin: 2.5rem 0;
+
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 0.5rem;
+  }
+  .trackInfo {
+    flex-grow: 1;
+    strong {
+      display: block;
+      font-weight: 600;
+    }
+    span {
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+    p {
+      font-size: 0.875rem;
+      color: #6b7280;
+      margin: 0.25rem 0 0 0;
+    }
+  }
+  .playButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #111827;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
+
+// --- Related Posts Styles ---
+.relatedPostsSection {
+  padding: 4rem 1rem;
+  background-color: #fafafa;
+  border-top: 1px solid #e5e7eb;
+}
+
+.relatedTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+  margin: 0 auto 3rem auto;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.relatedCard {
+  text-decoration: none;
+  color: inherit;
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .relatedCategory {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+  }
+  .relatedCardTitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #000;
+  }
+}

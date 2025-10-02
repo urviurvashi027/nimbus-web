@@ -1,0 +1,114 @@
+.page {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.mainLayout {
+  display: grid;
+  margin-top: 12rem;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  color: #000;
+  align-items: flex-start;
+}
+
+.leftContent {
+  width: 100%;
+}
+
+// --- Video Player ---
+.videoPlayer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #000;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.memberTag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: #fefce8;
+  color: #a16207;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.videoControls {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.playIcon {
+  font-size: 1.5rem;
+}
+.timer {
+  margin: 0 1rem;
+  font-size: 1.25rem;
+}
+.rightControls {
+  margin-left: auto;
+  display: flex;
+  gap: 1rem;
+  font-size: 1.25rem;
+}
+
+// --- Share Button & Title ---
+.shareButton {
+  background-color: #111827;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  float: right;
+}
+
+.titleSection {
+  margin-top: 4rem;
+  h1 {
+    font-size: 2.5rem;
+    margin: 0 0 0.5rem 0;
+  }
+  p {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin: 0;
+  }
+}
+
+// --- QR Code ---
+// --- QR Code (Updated for centering) ---
+.qrWrapper {
+  margin-top: 1.5rem;
+  min-height: 80px; // Reserve space so layout doesn't jump
+  display: flex;
+  justify-content: center; // Horizontally center the banner
+  align-items: center;
+}
+
+// --- Right Sidebar ---
+.rightSidebar {
+  position: sticky;
+  top: 100px;
+}

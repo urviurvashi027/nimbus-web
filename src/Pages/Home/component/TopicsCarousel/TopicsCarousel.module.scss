@@ -1,0 +1,99 @@
+// Main container for the carousel section
+.carouselSection {
+  padding: 4rem 1rem;
+  background-color: #fffdf7; // A soft off-white background
+  font-family: Inter, system-ui, sans-serif;
+  position: relative; // Needed for positioning the arrows
+}
+
+// Container for the content within a single slide
+.slideContent {
+  text-align: center;
+  padding: 0 2rem; // Add horizontal padding to prevent content from touching the arrows
+}
+
+// Wrapper for the title and description
+.textWrapper {
+  max-width: 650px;
+  margin: 0 auto 3rem auto; // Center the text block and add space below
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937; // dark-gray
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #4b5563; // medium-gray
+}
+
+// Flex container for the three phone mockups
+.phonesWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap; // Allow phones to wrap on smaller screens
+}
+
+// Individual phone mockup styles
+.phoneMockup {
+  width: 16rem;
+  height: 28rem;
+  background-color: #1f2937; // dark-gray
+  border-radius: 2.5rem;
+  padding: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden; // Hide parts of the image that go outside the border-radius
+}
+
+// The image that acts as the phone screen
+.phoneScreenImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; // Ensures the image covers the entire area
+  border-radius: 2rem; // Match the inner radius of the phone frame
+}
+
+// --- Custom Arrow Styles ---
+.slickArrow {
+  position: absolute;
+  top: 65%; // Moved down to align vertically with the phones
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #f3f4f6; // Changed button background color
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex !important; // Override default slick styles
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #374151; // Changed icon color
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #e5e7eb; // Darker hover for the new button color
+    transform: translateY(-50%) scale(1.05);
+  }
+}
+
+.slickPrev {
+  left: 1rem; // Moved closer on small screens
+  @media (min-width: 1280px) {
+    left: 12rem; // Positioned closer to the phone images on large screens
+  }
+}
+
+.slickNext {
+  right: 1rem; // Moved closer on small screens
+  @media (min-width: 1280px) {
+    right: 12rem; // Positioned closer to the phone images on large screens
+  }
+}

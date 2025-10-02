@@ -1,0 +1,80 @@
+// Your existing styles are preserved
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  z-index: 1000;
+  // position: relative is added here so the dropdown positions correctly
+  // but since it's fixed, the dropdown will appear relative to the viewport.
+  // This works best when the header is in its 'scrolled' state.
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #5b3fba;
+  a {
+    // Make sure links inside the logo are styled correctly
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+// Your existing nav styles are now applied to navList for the ul
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 25px; // Increased gap for better spacing
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .navLink {
+    // Style for the simple links
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+}
+
+/* Header when scrolled */
+.scrolled {
+  border-radius: 0;
+  width: 100%; // Changed to 100% to match the dropdown width
+  top: 0;
+  left: 0;
+  transform: none;
+  padding: 10px 40px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+// --- NEW STYLES ADDED FOR THE DROPDOWN ---
+
+// Style for the clickable "Blog" item
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #333;
+}
+
+// Style for the down arrow icon
+.chevron {
+  font-size: 0.75rem;
+  transition: transform 0.2s ease-in-out;
+  &.open {
+    transform: rotate(180deg);
+  }
+}

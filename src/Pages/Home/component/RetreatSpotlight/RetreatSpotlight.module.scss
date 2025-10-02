@@ -1,0 +1,92 @@
+// Main container for the spotlight section
+.spotlightSection {
+  padding: 4rem 1rem;
+  background-color: #fffdf7; // A soft off-white background
+  text-align: center;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 3rem;
+}
+
+// The main grid for the cards
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+// Individual card styling
+.card {
+  background-color: #ffffff;
+  border: 1px solid #f3f4f6; // Light border
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07);
+  }
+}
+
+.imagePlaceholder {
+  height: 12rem;
+  background-color: #f9fafb; // A light gray for the placeholder area
+  background-size: cover;
+  background-position: center;
+}
+
+.cardContent {
+  padding: 1.5rem;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+}
+
+.hostedBy {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0 0 1.5rem 0;
+}
+
+// Grid for the bottom details (price, date, location)
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 1.5rem;
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.detailLabel {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.detailValue {
+  font-size: 0.875rem;
+  color: #374151;
+  font-weight: 500;
+}

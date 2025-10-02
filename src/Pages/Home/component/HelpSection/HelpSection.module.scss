@@ -1,0 +1,152 @@
+// Main container for the full-screen background
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.helpSection {
+  min-height: 100vh;
+  font-family: Inter, system-ui, sans-serif;
+  background-image: url("/assets/forest.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+// The glassmorphism card
+.card {
+  width: 100%;
+  max-width: 1024px;
+  padding: 5rem 6rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px); // For Safari
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+// Flex container for the two columns (phone and options)
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+  flex-direction: column; // Stack vertically on small screens
+
+  // Switch to side-by-side on larger screens
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+// --- Phone Mockup Styles ---
+.phoneMockup {
+  width: 16rem;
+  height: 34rem;
+  background-color: #1f2937; // dark-gray
+  border-radius: 2.5rem;
+  padding: 0.75rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+}
+
+.phoneScreen {
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/sunrise.jpeg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.phoneTime {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.phoneControls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.phoneTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.phoneSubtitle {
+  font-size: 0.875rem;
+  color: #e5e7eb; // light-gray
+  margin: 0;
+}
+
+.phonePauseIcon {
+  font-size: 1.5rem;
+}
+
+// --- Help Options Styles ---
+.optionsWrapper {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.mainTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1f2937; // dark-gray
+  margin-bottom: 1.5rem;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.optionButton {
+  width: 97%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #374151; // medium-gray
+  font-weight: 500;
+
+  &:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.optionIcon {
+  color: #9ca3af; // gray-400
+}

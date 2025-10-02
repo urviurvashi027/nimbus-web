@@ -1,0 +1,186 @@
+// Main container for the dropdown panel
+.dropdownPanel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem 0;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.contentWrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.mainTitle {
+  font-size: 1.25rem;
+  color: #374151;
+  margin: 0 0 2.5rem 0;
+  font-weight: 500;
+}
+
+.grid {
+  display: grid;
+  // Adjusted grid to give more space to the middle column
+  grid-template-columns: 0.8fr 2.4fr 0.8fr;
+  gap: 2.5rem;
+}
+
+.columnTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 1.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+// Categories Column
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  a {
+    color: #4b5563;
+    text-decoration: none;
+    font-size: 0.85rem; // Slightly reduced font size
+    &:hover {
+      color: #111827;
+    }
+  }
+}
+
+// Top Retreats Column
+.topRetreats {
+  position: relative;
+  padding-left: 2.5rem; // Add space for the partition line
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #e5e7eb;
+  }
+}
+
+.retreatsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  border: 1px solid #f3f4f6;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; // Ensure content flows top-to-bottom
+}
+
+.imagePlaceholder {
+  height: 8rem;
+  background-color: #f9fafb;
+}
+
+.cardContent {
+  padding: 1rem;
+  background-color: white;
+  flex-grow: 1; // Allow content to fill available space
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+  color: #111827;
+}
+
+.hostedBy {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0 0 1.5rem 0;
+}
+
+// --- FINAL CORRECTED DETAIL SECTION ---
+.detailsGrid {
+  display: grid;
+  // Create two columns, the second being wider
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 1rem;
+  margin-top: auto; // Pushes this to the bottom
+  align-items: flex-start;
+
+  // Target the second column (date/location)
+  > div:nth-child(2) {
+    position: relative;
+    padding-left: 1rem; // Make space for the partition
+
+    // The vertical partition line
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background-color: #f3f4f6;
+    }
+  }
+}
+
+.detailLabel,
+.detailValue {
+  display: block; // This is the key fix
+  text-align: left;
+}
+
+.detailLabel {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+  color: #6b7280;
+}
+
+.detailValue {
+  color: #374151;
+  font-weight: 500;
+  line-height: 1.4;
+  font-size: 13px; // Set font size as requested
+}
+
+// Find Perfect Retreat Column
+.findPerfect {
+  position: relative;
+  padding-left: 2.5rem; // Add space for the partition line
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #e5e7eb;
+  }
+}
+
+.description {
+  font-size: 0.95rem; // Slightly reduced font size
+  line-height: 1.6;
+  color: #4b5563;
+}

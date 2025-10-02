@@ -1,0 +1,71 @@
+.sidebar {
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.filterGroup {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1.5rem 0;
+  color: #000;
+}
+
+.groupTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.groupSubtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0 0 1.5rem 0;
+}
+
+.priceInputs {
+  display: flex;
+  gap: 1rem;
+  input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+.options {
+  display: flex;
+  color: #000;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.checkboxLabel {
+  display: flex;
+
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+
+  input[type="checkbox"] {
+    width: 1.25rem;
+    height: 1.25rem;
+    // accent-color: #111827;
+  }
+
+  .count {
+    margin-left: auto;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+}
+
+.showMore {
+  background: none;
+  border: none;
+  color: #111827;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}

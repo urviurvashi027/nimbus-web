@@ -1,0 +1,103 @@
+.footer {
+  background-color: #fffdf7;
+  padding: 40px 80px;
+
+  .topSection {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h2 {
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .joinNowButton {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #333;
+      }
+    }
+  }
+
+  .bottomSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+
+    h3 {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 8px;
+
+        &:hover {
+          color: #5b3fba;
+        }
+      }
+    }
+
+    .followMe {
+      ul li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+
+    .newsletter {
+      p {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 10px;
+      }
+
+      .subscribeForm {
+        display: flex;
+        gap: 10px;
+
+        input {
+          flex: 1;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+
+        button {
+          background-color: #5b3fba;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #4730a8;
+          }
+        }
+      }
+    }
+  }
+}

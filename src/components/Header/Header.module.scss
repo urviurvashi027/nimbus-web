@@ -1,80 +1,128 @@
-// Your existing styles are preserved
+@use "@/styles/theme" as *;
+
+// --- MOBILE FIRST STYLES ---
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background-color: #ffffff;
-  border-radius: 50px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.5s ease;
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
+  padding: 1rem 1.5rem;
+  background-color: $background-dark;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky; // Sticks to the top on mobile
+  top: 0;
+  width: 100%;
   z-index: 1000;
-  // position: relative is added here so the dropdown positions correctly
-  // but since it's fixed, the dropdown will appear relative to the viewport.
-  // This works best when the header is in its 'scrolled' state.
+  border-radius: 0; // Full width, no rounded corners on mobile
+  transition: none;
 }
 
 .logo {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
-  color: #5b3fba;
+  color: $text-secondary;
+  z-index: 2; // Keep logo above mobile menu
   a {
-    // Make sure links inside the logo are styled correctly
     text-decoration: none;
     color: inherit;
   }
 }
 
-// Your existing nav styles are now applied to navList for the ul
+// Hamburger Menu Icon
+.menuIcon {
+  display: block;
+  font-size: 1.5rem;
+  color: $text-secondary;
+  cursor: pointer;
+  z-index: 2; // Keep icon above mobile menu
+}
+
+// --- Navigation List ---
 .navList {
-  display: flex;
+  // Mobile styles (hidden by default, appears as an overlay)
+  display: none; // Hidden by default
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $background-light;
+  padding-top: $header-height + 20px;
   align-items: center;
-  gap: 25px; // Increased gap for better spacing
+  gap: 2rem;
   list-style: none;
   margin: 0;
-  padding: 0;
 
-  .navLink {
-    // Style for the simple links
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
+  &.mobileMenuOpen {
+    display: flex; // Show when the mobile menu is open
+  }
+
+  .navLink,
+  .dropdownItem {
+    color: $text-secondary;
+    font-size: 1.25rem;
   }
 }
 
-/* Header when scrolled */
-.scrolled {
-  border-radius: 0;
-  width: 100%; // Changed to 100% to match the dropdown width
-  top: 0;
-  left: 0;
-  transform: none;
-  padding: 10px 40px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
-}
-
-// --- NEW STYLES ADDED FOR THE DROPDOWN ---
-
-// Style for the clickable "Blog" item
 .dropdownItem {
   display: flex;
   align-items: center;
   gap: 8px;
   cursor: pointer;
   font-weight: 500;
-  color: #333;
+  color: $text-secondary;
 }
 
-// Style for the down arrow icon
 .chevron {
   font-size: 0.75rem;
+  color: $text-secondary;
   transition: transform 0.2s ease-in-out;
   &.open {
     transform: rotate(180deg);
+  }
+}
+
+// --- DESKTOP STYLES (Your original floating pill design) ---
+@media (min-width: 1024px) {
+  .header {
+    padding: 20px 40px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+  }
+
+  .scrolled {
+    border-radius: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: none;
+    padding: 10px 40px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .menuIcon {
+    display: none; // Hide hamburger on desktop
+  }
+
+  .navList {
+    display: flex; // Revert to flex for desktop
+    flex-direction: row;
+    position: static;
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    padding-top: 0;
+    gap: 25px;
+
+    .navLink,
+    .dropdownItem {
+      font-size: 1rem; // Reset font size for desktop
+    }
   }
 }

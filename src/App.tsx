@@ -14,37 +14,13 @@ import GuidedMeditationPage from "./Pages/GuidedMeditationPage/GuidedMeditationP
 import RetreatDetailPage from "./Pages/RetreatDetailPage/RetreatDetailPage";
 import RetreatsListPage from "./Pages/RetreatListPage/RetreatListPage";
 
-// import Banner from "./components/Banner/Banner";
-// import TopRatedPosts from "./components/TopRatedPosts/TopRatedPosts";
-// import ProductLaunch from "./components/ProductLaunch/ProductLaunch";
-// import HeroSection from "./components/HeroSection/HeroSection";
-// import styles from "./App.module.scss";
-
 const App: React.FC = () => {
   return (
-    // <div className={styles.app}>
-    //   <Header />
-    //   <HeroSection />
-    //   <TopRatedPosts />
-    //   <ProductLaunch />
-    //   <Footer />
-    //   {/* <Banner />
-    //   <section className={styles.mainContent}>
-    //     // <TopRatedPosts />
-    //     // <ProductLaunch />
-    //   </section>
-    //   <Footer /> */}
-    // </div>
-    // <ParallaxProvider>
     <Router>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blogs" element={<BlogPage />} />
-        {/* Route for individual blog posts */}
-        {/* <Route path="/blog/:topic/:subtopicId" element={<BlogPost />} /> */}
-        {/* Route for paginated subtopics */}
-        {/* <Route path="/blog/:topic/all" element={<BlogContent />} /> */}
         <Route
           path="/blog/category/:categorySlug"
           element={<BlogCategoryPage />}

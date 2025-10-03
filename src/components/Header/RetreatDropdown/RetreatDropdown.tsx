@@ -46,7 +46,7 @@ const retreatData = {
 
 // The component now accepts a prop to close itself after a link is clicked
 interface RetreatsDropdownProps {
-  onLinkClick: () => void;
+  onLinkClick?: () => void;
 }
 
 const RetreatsDropdown: React.FC<RetreatsDropdownProps> = ({ onLinkClick }) => {

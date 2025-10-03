@@ -1,3 +1,4 @@
+@use "@/styles/theme" as *;
 .card {
   display: block;
   text-decoration: none;
@@ -27,8 +28,8 @@
   position: absolute;
   bottom: 0.75rem;
   left: 0.75rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
+  background-color: $accent-color;
+  color: $background-dark;
   padding: 0.35rem 0.75rem;
   border-radius: 9999px;
   font-size: 0.75rem;
@@ -44,7 +45,7 @@
 
 .metaTop {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: $text-primary;
   margin-bottom: 0.75rem;
 }
 
@@ -53,10 +54,10 @@
   font-weight: 600;
   line-height: 1.4;
   margin-bottom: 0.5rem;
-  color: #111827;
+  color: $text-secondary;
 }
 
 .cardAuthor {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: $text-secondary;
 }

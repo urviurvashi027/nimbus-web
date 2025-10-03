@@ -1,3 +1,5 @@
+@use "@/styles/theme" as *;
+
 .articleSection {
   width: 100%;
 }
@@ -6,7 +8,7 @@
   font-size: 1.75rem;
   font-weight: 600;
   margin-bottom: 2rem;
-  color: #111827;
+  color: $text-primary;
 }
 
 .articlesGrid {
@@ -56,11 +58,11 @@
     font-weight: 600;
     line-height: 1.4;
     margin-bottom: 0.5rem;
-    color: #000;
+    color: $text-primary;
   }
 
   .cardAuthor {
     font-size: 0.875rem;
-    color: #6b7280;
+    color: $text-secondary;
   }
 }

@@ -58,6 +58,10 @@ const RetreatSpotlight: React.FC = () => {
   return (
     <div className={styles.spotlightSection}>
       <h2 className={styles.title}>Retreat Spotlight</h2>
+      <p className={styles.description}>
+        The world's largest library of free sleep meditations and stories to
+        help you fall asleep faster.
+      </p>
       <div className={styles.grid}>
         {spotlightRetreats.map((retreat, index) => (
           <div key={index} className={styles.card}>

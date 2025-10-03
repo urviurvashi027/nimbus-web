@@ -1,7 +1,8 @@
-// Main container for the spotlight section
+@use "@/styles/theme" as *;
 .spotlightSection {
+  margin-bottom: 4rem;
   padding: 4rem 1rem;
-  background-color: #fffdf7; // A soft off-white background
+  background-color: $surface-color; // A soft off-white background
   text-align: center;
   font-family: Inter, system-ui, sans-serif;
 }
@@ -9,7 +10,8 @@
 .title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1f2937;
+  color: $text-primary;
+  margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
@@ -23,10 +25,17 @@
   text-align: left;
 }
 
+.description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: $text-secondary; // medium-gray
+  margin-bottom: 3rem;
+}
+
 // Individual card styling
 .card {
-  background-color: #ffffff;
-  border: 1px solid #f3f4f6; // Light border
+  background-color: $background-dark;
+  border: 1px solid $divider-color; // Light border
   border-radius: 0.75rem;
   overflow: hidden;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
@@ -40,7 +49,7 @@
 
 .imagePlaceholder {
   height: 12rem;
-  background-color: #f9fafb; // A light gray for the placeholder area
+  background-color: red; // A light gray for the placeholder area
   background-size: cover;
   background-position: center;
 }
@@ -52,14 +61,14 @@
 .cardTitle {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #111827;
+  color: $text-primary;
   margin: 0 0 0.5rem 0;
   line-height: 1.4;
 }
 
 .hostedBy {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: $text-secondary;
   margin: 0 0 1.5rem 0;
 }
 
@@ -68,7 +77,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 1rem;
-  border-top: 1px solid #f3f4f6;
+  border-top: 1px solid $divider-color;
   padding-top: 1.5rem;
 
   div {
@@ -79,7 +88,7 @@
 
 .detailLabel {
   font-size: 0.75rem;
-  color: #6b7280;
+  color: $text-secondary;
   margin-bottom: 0.25rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -87,6 +96,6 @@
 
 .detailValue {
   font-size: 0.875rem;
-  color: #374151;
+  color: $text-primary;
   font-weight: 500;
 }

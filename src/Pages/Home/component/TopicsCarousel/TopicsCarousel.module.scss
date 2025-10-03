@@ -1,9 +1,11 @@
-// Main container for the carousel section
+@use "@/styles/theme" as *;
+
 .carouselSection {
   padding: 4rem 1rem;
-  background-color: #fffdf7; // A soft off-white background
+  background-color: $background-dark; // A soft off-white background
   font-family: Inter, system-ui, sans-serif;
   position: relative; // Needed for positioning the arrows
+  margin-bottom: 5rem;
 }
 
 // Container for the content within a single slide
@@ -15,20 +17,21 @@
 // Wrapper for the title and description
 .textWrapper {
   max-width: 650px;
-  margin: 0 auto 3rem auto; // Center the text block and add space below
+  // 4rem auto 6rem auto;
+  margin: 4rem auto 6rem auto; // Center the text block and add space below
 }
 
 .title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1f2937; // dark-gray
+  color: $text-primary; // dark-gray
   margin-bottom: 1rem;
 }
 
 .description {
   font-size: 1.125rem;
   line-height: 1.6;
-  color: #4b5563; // medium-gray
+  color: $text-secondary; // medium-gray
 }
 
 // Flex container for the three phone mockups
@@ -36,17 +39,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2.5rem;
   flex-wrap: wrap; // Allow phones to wrap on smaller screens
 }
 
 // Individual phone mockup styles
 .phoneMockup {
   width: 16rem;
-  height: 28rem;
-  background-color: #1f2937; // dark-gray
+  height: 34rem;
+  background-color: $surface-color; // dark-gray
   border-radius: 2.5rem;
-  padding: 0.75rem;
+  padding: 0.3rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
   overflow: hidden; // Hide parts of the image that go outside the border-radius
@@ -69,7 +72,7 @@
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background-color: #f3f4f6; // Changed button background color
+  background-color: $surface-color; // Changed button background color
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: flex !important; // Override default slick styles
   align-items: center;
@@ -79,7 +82,7 @@
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    background-color: #e5e7eb; // Darker hover for the new button color
+    background-color: $accent-color; // Darker hover for the new button color
     transform: translateY(-50%) scale(1.05);
   }
 }

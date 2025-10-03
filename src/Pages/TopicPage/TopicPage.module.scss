@@ -1,6 +1,9 @@
 // Main container for the topic page
+
+@use "@/styles/theme" as *;
 .topicPage {
-  background-color: #ffffff;
+  background-color: $surface-color;
+  margin-top: 10rem;
   font-family: Inter, system-ui, sans-serif;
   padding-bottom: 100px; // Space for the sticky footer
 }
@@ -9,7 +12,7 @@
 .tabNav {
   max-width: 1200px;
   margin: 0 auto;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid $divider-color;
   padding: 0 2rem;
   display: flex;
   gap: 2rem;
@@ -19,11 +22,12 @@
     padding: 1rem 0;
     font-size: 1rem;
     font-weight: 500;
-    color: #6b7280;
+    color: $text-secondary;
     cursor: pointer;
     position: relative;
     &.active {
-      color: #111827;
+      color: $accent-color;
+      border: none;
       &::after {
         content: "";
         position: absolute;
@@ -31,7 +35,8 @@
         left: 0;
         right: 0;
         height: 2px;
-        background-color: #111827;
+        border: none;
+        background-color: $surface-color;
       }
     }
   }
@@ -46,10 +51,16 @@
 
 // New two-column layout for the content
 .contentLayout {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 4rem;
-  align-items: flex-start;
+  // display: grid;
+  // grid-template-columns: 2fr 1fr;
+  // gap: 4rem;
+  // align-items: flex-start;
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: flex-start;
+  }
 }
 
 // Left column for dynamic tab content
@@ -59,15 +70,20 @@
 
 // Right column for the sticky sidebar
 .rightColumn {
-  position: sticky;
-  top: 100px; // Adjust based on your header height
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: block;
+    position: sticky;
+    top: 100px; // Adjust based on your header height
+  }
 }
 
 // Styles for the long-form article in the "Featured" tab
 .articleContent {
   font-size: 1.125rem;
   line-height: 1.8;
-  color: #374151;
+  color: $text-secondary;
   h2 {
     font-size: 2rem;
     font-weight: 600;
@@ -90,8 +106,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #111827;
-  color: white;
+  background-color: $background-dark;
+  color: $text-secondary;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,7 +120,7 @@
   }
 
   .getAppButton {
-    background-color: white;
+    background-color: $accent-color;
     color: #111827;
     border: none;
     padding: 0.6rem 1.2rem;

@@ -10,9 +10,9 @@ const topics = [
     description:
       "The world's largest library of free sleep meditations and stories to help you fall asleep faster.",
     images: [
-      "/assets/phone-1.png",
-      "/assets/phone-2.png",
-      "/assets/phone-3.png",
+      "/assets/mobile/1.png",
+      "/assets/mobile/2.png",
+      "/assets/mobile/3.png",
     ],
   },
   {
@@ -20,9 +20,9 @@ const topics = [
     description:
       "The world's largest library of free guided meditations with 270,000 tracks from psychologists, spiritual leaders and mindfulness teachers.",
     images: [
-      "/assets/phone-1.png",
-      "/assets/phone-2.png",
-      "/assets/phone-3.png",
+      "/assets/mobile/4.png",
+      "/assets/mobile/5.png",
+      "/assets/mobile/6.png",
     ],
   },
   {
@@ -30,9 +30,9 @@ const topics = [
     description:
       "Live yoga from the world's best teachers streaming throughout the day. For free.",
     images: [
-      "/assets/phone-1.png",
-      "/assets/phone-2.png",
-      "/assets/phone-3.png",
+      "/assets/mobile/7.png",
+      "/assets/mobile/5.png",
+      "/assets/mobile/8.png",
     ],
   },
 ];

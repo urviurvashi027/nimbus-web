@@ -1,3 +1,5 @@
+@use "@/styles/theme" as *;
+
 .contentCarouselSection {
   //   display: grid;
   //   grid-template-columns: 1fr 2fr;
@@ -13,16 +15,17 @@
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
+    color: $text-primary;
   }
   p {
     font-size: 1rem;
     line-height: 1.6;
-    color: #4b5563;
+    color: $text-secondary;
     margin-bottom: 1.5rem;
   }
   .readMoreLink {
     font-weight: 600;
-    color: #111827;
+    color: $text-secondary;
     text-decoration: underline;
   }
 }

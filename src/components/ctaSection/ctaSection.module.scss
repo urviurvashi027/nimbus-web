@@ -1,7 +1,10 @@
 // Main container for the CTA section
+
+@use "@/styles/theme" as *;
+
 .ctaSection {
   padding: 5rem 1rem;
-  background-color: #f8f5f0; // A very light, warm off-white
+  background-color: $surface-color; // A very light, warm off-white
   font-family: Inter, system-ui, sans-serif;
   display: flex;
   justify-content: center;
@@ -17,7 +20,7 @@
 .title {
   font-size: 2.75rem;
   font-weight: 600;
-  color: #374151;
+  color: $text-primary;
   line-height: 1.2;
   margin: 0 0 1.5rem 0;
 }
@@ -25,7 +28,7 @@
 .description {
   font-size: 1.125rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: $text-secondary;
   margin: 0 0 2.5rem 0;
 }
 
@@ -33,15 +36,15 @@
   padding: 1rem 2.5rem;
   font-size: 1rem;
   font-weight: 600;
-  color: #ffffff;
-  background-color: #5a9a8c; // The teal button color
+  color: $surface-color;
+  background-color: $accent-color; // The teal button color
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 
   &:hover {
-    background-color: #4e877a; // A slightly darker shade for hover
+    background-color: $accent-color; // A slightly darker shade for hover
     transform: translateY(-2px);
   }
 }

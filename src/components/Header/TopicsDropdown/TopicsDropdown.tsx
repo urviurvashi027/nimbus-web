@@ -35,7 +35,7 @@ const topicsData = {
 };
 
 interface TopicsDropdownProps {
-  onLinkClick: () => void;
+  onLinkClick?: () => void;
 }
 
 const TopicsDropdown: React.FC<TopicsDropdownProps> = ({ onLinkClick }) => {

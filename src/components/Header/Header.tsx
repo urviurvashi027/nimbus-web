@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { FaChevronDown } from "react-icons/fa";
+import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa"; // Added menu icons
 import styles from "./Header.module.scss";
 import TopicsDropdown from "./TopicsDropdown/TopicsDropdown";
 import RetreatsDropdown from "./RetreatDropdown/RetreatDropdown";
@@ -8,11 +8,11 @@ import ResourcesDropdown from "./ResourcesDropdown/ResourcesDropdown";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-
   const [isTopicsOpen, setIsTopicsOpen] = useState(false);
-  const [isRetreatsOpen, setIsRetreatsOpen] = useState(false); // State for the new dropdown
-  const [isResourcesOpen, setIsResourcesOpen] = useState(false); // State for the new dropdown
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [isRetreatsOpen, setIsRetreatsOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // State for mobile menu
+  const headerRef = useRef<HTMLElement>(null);
 
   const closeAllDropdowns = () => {
     setIsTopicsOpen(false);
@@ -31,43 +31,53 @@ const Header: React.FC = () => {
     }
   };
 
-  // Handle clicks outside the dropdown to close it
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
+        headerRef.current &&
+        !headerRef.current.contains(event.target as Node)
       ) {
         closeAllDropdowns();
+        setIsMobileMenuOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
+    <header
+      className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}
+      ref={headerRef}
+    >
       <div className={styles.logo}>
         <Link to="/" className={styles.navLink}>
           Nimbus
         </Link>
       </div>
-      <ul className={styles.navList}>
+
+      {/* Hamburger Menu Icon */}
+      <div
+        className={styles.menuIcon}
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+      >
+        {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+      </div>
+
+      {/* Navigation List with responsive class */}
+      <ul
+        className={`${styles.navList} ${
+          isMobileMenuOpen ? styles.mobileMenuOpen : ""
+        }`}
+      >
         <li
           className={styles.dropdownItem}
           onClick={() => handleNavClick(setIsTopicsOpen, isTopicsOpen)}
@@ -77,7 +87,7 @@ const Header: React.FC = () => {
             className={`${styles.chevron} ${isTopicsOpen ? styles.open : ""}`}
           />
         </li>
-        <li
+        {/* <li
           className={styles.dropdownItem}
           onClick={() => handleNavClick(setIsRetreatsOpen, isRetreatsOpen)}
         >
@@ -85,7 +95,7 @@ const Header: React.FC = () => {
           <FaChevronDown
             className={`${styles.chevron} ${isRetreatsOpen ? styles.open : ""}`}
           />
-        </li>
+        </li> */}
         <li
           className={styles.dropdownItem}
           onClick={() => handleNavClick(setIsResourcesOpen, isResourcesOpen)}
@@ -98,18 +108,18 @@ const Header: React.FC = () => {
           />
         </li>
         <li>
-          <Link to="/subscribe" className={styles.navLink}>
+          <Link to="/about" className={styles.navLink}>
             About Us
           </Link>
         </li>
         <li>
-          <Link to="/subscribe" className={styles.navLink}>
+          <Link to="/community" className={styles.navLink}>
             Join Community
           </Link>
         </li>
       </ul>
 
-      {/* The dropdown panel is rendered conditionally below the header */}
+      {/* Dropdown panels */}
       {isTopicsOpen && <TopicsDropdown />}
       {isRetreatsOpen && <RetreatsDropdown />}
       {isResourcesOpen && <ResourcesDropdown onLinkClick={closeAllDropdowns} />}

@@ -1,4 +1,5 @@
 // Main container for the full-screen background
+@use "@/styles/theme" as *;
 
 *,
 *::before,
@@ -8,7 +9,7 @@
 .helpSection {
   min-height: 100vh;
   font-family: Inter, system-ui, sans-serif;
-  background-image: url("/assets/forest.jpg");
+  background-image: url("/assets/hero.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -19,7 +20,6 @@
 
 // The glassmorphism card
 .card {
-  width: 100%;
   max-width: 1024px;
   padding: 5rem 6rem;
   background-color: rgba(255, 255, 255, 0.3);
@@ -28,6 +28,10 @@
   border-radius: 1rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  // Switch to side-by-side on larger screens
+  @media (min-width: 768px) {
+    width: 100%;
+  }
 }
 
 // Flex container for the two columns (phone and options)
@@ -35,12 +39,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10rem;
+  gap: 5rem;
   flex-direction: column; // Stack vertically on small screens
 
   // Switch to side-by-side on larger screens
   @media (min-width: 768px) {
     flex-direction: row;
+    gap: 10rem;
     justify-content: space-between;
   }
 }
@@ -49,9 +54,9 @@
 .phoneMockup {
   width: 16rem;
   height: 34rem;
-  background-color: #1f2937; // dark-gray
-  border-radius: 2.5rem;
-  padding: 0.75rem;
+  // background-color: #1f2937; // dark-gray
+  border-radius: 2rem;
+  padding: 0.3rem;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   flex-shrink: 0;
 }
@@ -59,7 +64,7 @@
 .phoneScreen {
   width: 100%;
   height: 100%;
-  background-image: url("/assets/sunrise.jpeg");
+  background-image: url("/assets/help.png");
   background-size: cover;
   background-position: center;
   border-radius: 2rem;
@@ -129,7 +134,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem;
-  background-color: white;
+  background-color: $background-dark;
   border-radius: 0.5rem;
   border: none;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -138,7 +143,7 @@
   cursor: pointer;
   font-size: 1rem;
   font-family: inherit;
-  color: #374151; // medium-gray
+  color: $accent-color; // medium-gray
   font-weight: 500;
 
   &:hover {
@@ -148,5 +153,5 @@
 }
 
 .optionIcon {
-  color: #9ca3af; // gray-400
+  color: $accent-color; // gray-400
 }

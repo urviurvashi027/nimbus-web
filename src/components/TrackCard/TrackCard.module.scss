@@ -1,3 +1,5 @@
+@use "@/styles/theme" as *;
+
 .card {
   display: block;
   text-decoration: none;
@@ -29,7 +31,7 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 0.875rem;
-  color: #6b7280;
+  color: $text-secondary;
   margin-bottom: 0.75rem;
 
   span {
@@ -39,7 +41,7 @@
   }
 
   svg {
-    color: #f59e0b; // Star color
+    color: $accent-color; // Star color
   }
 }
 
@@ -48,10 +50,10 @@
   font-weight: 600;
   line-height: 1.4;
   margin-bottom: 0.5rem;
-  color: #111827;
+  color: $text-secondary;
 }
 
 .cardAuthor {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: $text-secondary;
 }

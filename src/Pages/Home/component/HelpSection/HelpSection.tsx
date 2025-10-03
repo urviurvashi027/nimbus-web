@@ -18,7 +18,7 @@ const HelpSection: React.FC = () => {
           {/* Left Side: Phone Mockup */}
           <div className={styles.phoneMockup}>
             <div className={styles.phoneScreen}>
-              <div className={styles.phoneTime}>27:28</div>
+              {/* <div className={styles.phoneTime}>27:28</div>
               <div className={styles.phoneControls}>
                 <div>
                   <h2 className={styles.phoneTitle}>Morning Breathwork</h2>
@@ -27,7 +27,7 @@ const HelpSection: React.FC = () => {
                 <div className={styles.phonePauseIcon}>
                   <FaPause />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 

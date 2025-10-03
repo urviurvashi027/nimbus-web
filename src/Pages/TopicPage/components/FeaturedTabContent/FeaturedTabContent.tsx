@@ -131,7 +131,7 @@ const featuredData: FeaturedData = {
   },
 };
 
-const FeaturedTabContent: React.FC = () => {
+const FeaturedTabContent: React.FC = (items?: any) => {
   return (
     <div className={styles.featuredContent}>
       <CardCarousel title="Featured" items={featuredData.topCarousel} />
